@@ -151,11 +151,12 @@ Accent.BackgroundTransparency = 0.700
 Accent.BorderSizePixel = 0
 Accent.Position = UDim2.new(0, 0, 1, 0)
 Accent.Size = UDim2.new(1, 0, 0, 1)
+Accent:Destroy()
 
 Body.Name = "Body"
 Body.Parent = Container
-Body.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Body.BackgroundTransparency = 1.000
+Body.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Body.BackgroundTransparency = 0.7
 Body.BorderSizePixel = 0
 Body.ClipsDescendants = true
 Body.Position = UDim2.new(0, 0, 0, 32)
