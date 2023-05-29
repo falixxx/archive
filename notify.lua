@@ -1,4 +1,4 @@
-local isExist = false
+local isExistance = false
 
 local Notifyt = Instance.new("ScreenGui")
 local NotificationParent = Instance.new("ScrollingFrame")
@@ -19,7 +19,7 @@ local UIPadding_2 = Instance.new("UIPadding")
 local UISizeConstraint = Instance.new("UISizeConstraint")
 
 if game.CoreGui:FindFirstChild("Notifyt") then
-	isExist = true
+	isExistance = true
 	Notifyt = game.CoreGui.Notifyt
 	NotificationParent = Notifyt.NotificationParent
 	Notification = Notifyt.Notification
@@ -189,7 +189,7 @@ Body.AutomaticSize = Enum.AutomaticSize.Y
 
 -- remove clones: 
 
-if isExist then
+if isExistance then
 	UIListLayout:Destroy()
 	UIPadding:Destroy()
 	Container:Destroy()
@@ -203,16 +203,19 @@ local tp = NotificationParent
 
 function prompt(title, text, closeTime, close)
 	local Prompt = Notification:Clone()
+	local Sound = Instance.new('Sound', Notification)
 
 	Prompt.Visible = true
 	Prompt.Container.Top.Title.Text = title
 	Prompt.Container.Body.Content.Text = text
 
 	Prompt.Parent = NotificationParent
+	Sound.SoundId = "rbxassetid://6518811702"
+	Sound:Play()
 
 	T:Create(Prompt.Container, t, {Position = UDim2.new(0, 0, 0, 0)}):Play()
 
-    -- automatic sizee
+	-- auto size
 	Prompt.AutomaticSize = Enum.AutomaticSize.Y
 	Prompt.Container.AutomaticSize = Enum.AutomaticSize.Y
 	Prompt.Container.Body.AutomaticSize = Enum.AutomaticSize.Y
