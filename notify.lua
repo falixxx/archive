@@ -1,3 +1,4 @@
+-- skidded from https://raw.githubusercontent.com/Robobo2022/notify-lib/main/lib
 local isExistance = false
 
 local Notifyt = Instance.new("ScreenGui")
