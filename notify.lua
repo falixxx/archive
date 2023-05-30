@@ -200,7 +200,7 @@ end
 -- script converted by saypotato
 
 local T = game:GetService('TweenService')
-local t = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+local t = TweenInfo.new(0.5, Enum.EasingStyle.Quad)
 local tp = NotificationParent
 
 function prompt(title, text, closeTime, close)
